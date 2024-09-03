@@ -1,9 +1,9 @@
 {
-  "name": "groqbot",
+  "name": "groq-chatbot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.ts",
   "scripts": {
-    "start": "node index.js"
+    "start": "vercel dev"
   },
   "dependencies": {
     "groq-sdk": "^1.0.0",

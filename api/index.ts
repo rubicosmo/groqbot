@@ -5,12 +5,12 @@ dotenv.config();
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
-export async function main() {
+export default async function handler(req, res) {
   const chatCompletion = await getGroqChatCompletion();
-  console.log(chatCompletion.choices[0]?.message?.content || "");
+  res.status(200).json({ message: chatCompletion.choices[0]?.message?.content || "" });
 }
 
-export async function getGroqChatCompletion() {
+async function getGroqChatCompletion() {
   return groq.chat.completions.create({
     messages: [
       {
@@ -20,7 +20,4 @@ export async function getGroqChatCompletion() {
     ],
     model: "llama3-8b-8192",
   });
-}
-
-// Запуск основной функции
-main();
+}1 
