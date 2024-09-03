@@ -1,0 +1,12 @@
+{
+  "name": "groqbot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "groq-sdk": "^1.0.0",
+    "dotenv": "^16.0.0"
+  }
+}
